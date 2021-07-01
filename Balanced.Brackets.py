@@ -49,10 +49,16 @@ def is_balanced(str):
                         result = True
                 else:
                     result = False
-    return result
+    if result == True:
+        print ('{},  brackets are balanced'.format(str))
+    else:
+        print ('{},   brackets are not balanced'.format(str))
+    
 
-char = input('input the expression:  ')
-if is_balanced(char):
-    print ('brackets are balanced')
-else:
-    print ('brackets are not balanced')
+#testing
+#char = input('input the expression:  ')
+char1 = ' main() {\n\tfor (int i = 0; i < 10; ++i) {\n\t\t//some code\n\t}\n}\n}) '
+char2 = "[()]{[()()]()}"
+is_balanced(char1)
+print ('\n\n') 
+is_balanced(char2)

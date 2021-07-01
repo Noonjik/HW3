@@ -33,7 +33,7 @@ class Stack:
         return self._list_iterator
     def peek(self):
         if self.is_empty():
-            return 8
+            return None
         else:
             peek = self.pop()
             self.push(peek)
@@ -41,7 +41,7 @@ class Stack:
 
 
 
-class MinStack(object):
+class Min_O1(object):
     def __init__(self):
         self.main = Stack()
         self.mins = Stack()
@@ -58,19 +58,22 @@ class MinStack(object):
             self.mins.push(value)
         else:
             self.mins.push(self.mins.peek())
+    
     def pop(self):
         if self.main.is_empty():
             return None
         else:
             self.main.pop()
             self.mins.pop()
+    
     def getMin(self):
         if self.main.is_empty():
             return None
         else:
             return self.mins.peek()
 
-test1 = MinStack()
+#testing
+test1 = Min_O1()
 test1.push(5)
 test1.push(7)
 test1.push(8)

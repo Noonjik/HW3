@@ -39,8 +39,7 @@ class Stack:
             self.push(peek)
             return peek 
 
-
-
+        
 class Min_O1(object):
     def __init__(self):
         self.main = Stack()
